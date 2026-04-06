@@ -15,7 +15,7 @@ class Aluno:
         return self._nome
     
     @nome.setter
-    def nome (self, valor):
+    def nome(self, valor):
         self._nome = valor
     
     # Endereço
@@ -24,7 +24,7 @@ class Aluno:
         return self._endereco
     
     @endereco.setter
-    def endereco (self, valor):
+    def endereco(self, valor):
         self._endereco = valor
 
     # Telefone
@@ -33,7 +33,7 @@ class Aluno:
         return self._telefone
     
     @telefone.setter
-    def telefone (self, valor):
+    def telefone(self, valor):
         self._telefone = valor
 
     # Idade
@@ -42,7 +42,7 @@ class Aluno:
         return self._idade
     
     @idade.setter
-    def idade (self, valor):
+    def idade(self, valor):
         if not isinstance(valor, int):
             raise ValueError("Idade deve ser um número inteiro")
         self._idade = valor
