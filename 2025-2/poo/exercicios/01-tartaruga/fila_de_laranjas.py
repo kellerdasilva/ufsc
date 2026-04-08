@@ -3,7 +3,7 @@ import turtle
 
 # Criar uma variável para a tartaruga
 tartaruga = turtle.Turtle()
-tartaruga.speed(20)
+tartaruga.speed(15)
 
 # Criar função de desenhar laranjas
 def desenhar_laranja(raio):
