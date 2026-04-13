@@ -1,5 +1,3 @@
-# Exercício 01
-
 # Criar uma classe "Aluno" com os atributos: nome, endereço, telefone, idade e matrícula.
 class Aluno:
     def __init__(self, nome, endereco, telefone, idade, matricula):
@@ -67,12 +65,12 @@ class Aluno:
     def faz_aniversario(self):
         self.idade += 1
 
-# Instanciando objetos
+# Instanciar objetos
 aluno1 = Aluno("Lucas da Silva", "Saco dos Limões, Florianópolis", "48-92030-1930", 20, "32030")
 aluno2 = Aluno("Luís Carlos de Oliveira", "Costeira do Pirajubaé, Florianópolis", "48-91935-1909", 33, "11935")
 aluno3 = Aluno("João Paulo da Cruz", "Ipiranga, São José", "48-91949-1900", 27, "21949")
 
-# Testes
+# Testar métodos
 aluno1.mostra_dados()
 aluno1.faz_aniversario()
 aluno1.mostra_dados()
