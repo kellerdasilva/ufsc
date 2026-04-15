@@ -9,9 +9,5 @@ class CategoriaProduto:
         return self._titulo
     
     @titulo.setter
-    def titulo(self, valor):
-        self._titulo = valor
-    
-    
-
-    """Insira aqui os demais metodos ... """
+    def titulo(self, titulo):
+        self._titulo = titulo

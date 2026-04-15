@@ -10,8 +10,8 @@ class Cliente:
         return self._nome
     
     @nome.setter
-    def nome(self, valor):
-        self._nome = valor
+    def nome(self, nome):
+        self._nome = nome
 
     # Fone
     @property
@@ -19,7 +19,5 @@ class Cliente:
         return self._fone
     
     @fone.setter
-    def fone(self, valor):
-        self._fone = valor
-        
-    """Insira aqui os demais metodos ... """
+    def fone(self, fone):
+        self._fone = fone
