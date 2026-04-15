@@ -1,11 +1,11 @@
 # Criar uma classe "Aluno" com os atributos: nome, endereço, telefone, idade e matrícula.
 class Aluno:
     def __init__(self, nome, endereco, telefone, idade, matricula):
-        self.nome = nome
-        self.endereco = endereco
-        self.telefone = telefone
-        self.idade = idade
-        self.matricula = matricula
+        self._nome = nome
+        self._endereco = endereco
+        self._telefone = telefone
+        self._idade = idade
+        self._matricula = matricula
     
     # Nome
     @property

@@ -1,25 +1,25 @@
 class Cliente:
 
     def __init__(self, nome, fone):
-        self.__nome = nome
-        self.__fone = fone
+        self._nome = nome
+        self._fone = fone
 
     # Nome
     @property
     def nome(self):
-        return self.__nome
+        return self._nome
     
     @nome.setter
     def nome(self, valor):
-        self.__nome = valor
+        self._nome = valor
 
     # Fone
     @property
     def fone(self):
-        return self.__fone
+        return self._fone
     
     @fone.setter
     def fone(self, valor):
-        self.__fone = valor
+        self._fone = valor
         
     """Insira aqui os demais metodos ... """
