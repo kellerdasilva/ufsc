@@ -1,6 +1,8 @@
+from categoria_produto import CategoriaProduto
+from cliente import Cliente
+
 class Produto:
-    
-    def __init__(self, codigo, descricao, categoria_produto, quantidade, preco_unitario, cliente):
+    def __init__(self, codigo, descricao, categoria_produto, quantidade, preco_unitario, cliente=None):
         self._codigo = codigo
         self._descricao = descricao
         self._categoria_produto = categoria_produto
@@ -33,6 +35,8 @@ class Produto:
     
     @categoria_produto.setter
     def categoria_produto(self, categoria_produto):
+        if not isinstance(categoria_produto, CategoriaProduto):
+            raise TypeError("categoria_produto deve ser um CategoriaProduto")
         self._categoria_produto = categoria_produto
         
     # quantidade
@@ -60,8 +64,10 @@ class Produto:
     
     @cliente.setter
     def cliente(self, cliente):
+        if cliente is not None and not isinstance(cliente, Cliente):
+            raise TypeError("cliente deve ser um Cliente ou None")
         self._cliente = cliente
     
     # Método para calcular o valor total de um produto
     def preco_total(self):
-        return self._quantidade * self._preco_unitario
+        return self.quantidade * self.preco_unitario
