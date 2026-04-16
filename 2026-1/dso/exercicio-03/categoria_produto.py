@@ -1,10 +1,12 @@
 class CategoriaProduto:
     def __init__(self, titulo):
-        self.titulo = titulo
+        self.__titulo = titulo
     
     # Título
+    @property
     def titulo(self):
-        return self.titulo
+        return self.__titulo
     
+    @titulo.setter
     def titulo(self, titulo):
-        self.titulo = titulo
+        self.__titulo = titulo
