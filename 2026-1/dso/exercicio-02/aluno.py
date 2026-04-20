@@ -1,4 +1,3 @@
-# Criar uma classe "Aluno" com os atributos: nome, endereço, telefone, idade e matrícula.
 class Aluno:
     def __init__(self, nome, endereco, telefone, idade, matricula):
         self._nome = nome
