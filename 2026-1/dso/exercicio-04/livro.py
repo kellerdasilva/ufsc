@@ -55,22 +55,33 @@ class Livro:
     
     # Incluir autor
     def incluir_autor(self, autor: Autor):
-        # Verificar se o autor é nulo
+        # Verificar tipo
         if autor is None:
-            raise ValueError("Autor não pode ser nulo")
+            # raise ValueError("Autor não pode ser nulo")
+            return
+        
+        if not isinstance(autor, Autor):
+            # raise TypeError("O objeto deve ser da classe Autor")
+            return
         
         # Verificar se o autor já está vinculado ao livro
         for a in self.__autores:
             if a.codigo == autor.codigo:
-                raise ValueError(f"Autor com código {autor.codigo} já está vinculado a este livro")
+                # raise ValueError(f"Autor com código {autor.codigo} já está vinculado a este livro")
+                return
         
         self.__autores.append(autor)
     
     # Excluir autor
     def excluir_autor(self, autor: Autor):
-        # Verificar se o autor é nulo
+        # Verificar tipo
         if autor is None:
-            raise ValueError("Autor não pode ser nulo")
+            # raise ValueError("Autor não pode ser nulo")
+            return
+        
+        if not isinstance(autor, Autor):
+            # raise TypeError("O objeto deve ser da classe Autor")
+            return
         
         # Verificar se o autor existe na lista
         for i, a in enumerate(self.__autores):
@@ -78,14 +89,15 @@ class Livro:
                 del self.__autores[i]
                 return
         
-        raise ValueError(f"Autor com código {autor.codigo} não está vinculado a este livro")
+        # raise ValueError(f"Autor com código {autor.codigo} não está vinculado a este livro")
 
     # Incluir capítulo
     def incluir_capitulo(self, numero: int, titulo: str):
         # Verificar se já existe capítulo com mesmo título
         for cap in self.__capitulos:
             if cap.titulo == titulo:
-                raise ValueError(f"Capítulo com título {titulo} já consta neste livro")
+                # raise ValueError(f"Capítulo com título {titulo} já consta neste livro")
+                return
         
         self.__capitulos.append(Capitulo(numero, titulo))
 
@@ -97,7 +109,7 @@ class Livro:
                 del self.__capitulos[i]
                 return
         
-        raise ValueError(f"Capítulo com título {titulo} não encontrado neste livro")
+        # raise ValueError(f"Capítulo com título {titulo} não encontrado neste livro")
 
     # Buscar capítulo por título
     def find_capitulo_by_titulo(self, titulo: str):
