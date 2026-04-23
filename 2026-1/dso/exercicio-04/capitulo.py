@@ -9,7 +9,7 @@ class Capitulo:
         return self.__numero
     
     @numero.setter
-    def numero(self, numero):
+    def numero(self, numero: int):
         self.__numero = numero
 
     # Título
@@ -18,5 +18,5 @@ class Capitulo:
         return self.__titulo
     
     @titulo.setter
-    def titulo(self, titulo):
+    def titulo(self, titulo: str):
         self.__titulo = titulo

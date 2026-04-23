@@ -9,7 +9,7 @@ class Autor:
         return self.__codigo
     
     @codigo.setter
-    def codigo(self, codigo):
+    def codigo(self, codigo: int):
         self.__codigo = codigo
     
     # Nome
@@ -18,5 +18,5 @@ class Autor:
         return self.__nome
     
     @nome.setter
-    def nome(self, nome):
+    def nome(self, nome: str):
         self.__nome = nome
