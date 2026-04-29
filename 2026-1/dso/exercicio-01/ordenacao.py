@@ -1,7 +1,15 @@
 class Ordenacao():
 
     def ordena(self, array_para_ordenar: list):
+        lista_ordenada = []
+        numero = array_para_ordenar[0]
+        for item in array_para_ordenar:
+            if item < numero:
+                numero = item
+            lista_ordenada.append(numero)
+            array_para_ordenar.remove(numero)
         
+        print(lista_ordenada)
         
         """Realiza a ordenacao do conteudo do array recebido como parâmetro"""
         ...
@@ -16,3 +24,5 @@ class Ordenacao():
      """
         ...
         return ...
+    
+Ordenacao.ordena([4, 3, 2, 1, 5])
